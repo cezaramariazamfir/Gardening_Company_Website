@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8" />
+        <title>Login</title>
+        <style>
+            #login-form {
+                width: 300px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+            }
+        
+            #login-form input {
+                display: block;
+                width: 92%;
+                margin-bottom: 10px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        
+            #login-form {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        
+            #login-form button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #4CAF50;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        
+            #login-form h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id = "login-form">
+            <input
+                type = "text"
+                id = "username"
+                placeholder = "Username admin"
+                required
+            />
+            <input type ="password" id = "password" placeholder = "Parola admin" required />
+            <button type="submit">Login</button>
+        </form>
+        <script src="login.js"></script>
+    </body>
+</html>

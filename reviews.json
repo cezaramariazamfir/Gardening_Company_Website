@@ -1,0 +1,45 @@
+[
+    {
+      "client_name": "Ion Popescu",
+      "review_date": "2024-05-10",
+      "rating": 5,
+      "comment": "Servicii excelente! Grădina arată minunat și totul a fost realizat la timp."
+    },
+    {
+      "client_name": "Maria Ionescu",
+      "review_date": "2024-05-15",
+      "rating": 4,
+      "comment": "Foarte mulțumită de rezultat, deși au fost câteva mici întârzieri."
+    },
+    {
+      "client_name": "Alexandru Gheorghe",
+      "review_date": "2024-05-20",
+      "rating": 3,
+      "comment": "Rezultatul final este ok, dar comunicarea cu echipa a fost dificilă."
+    },
+    {
+      "client_name": "Elena Dumitrescu",
+      "review_date": "2024-05-25",
+      "rating": 5,
+      "comment": "Recomand cu căldură! Profesioniști și foarte atenți la detalii."
+    },
+    {
+      "client_name": "Andrei Popa",
+      "review_date": "2024-05-28",
+      "rating": 4,
+      "comment": "Excelentă experiență de lucru cu echipa! Profesioniști și promptitudine în servicii."
+    },
+    {
+      "client_name": "Ana Marinescu",
+      "review_date": "2024-05-29",
+      "rating": 5,
+      "comment": "Încântată de rezultat! Totul a fost perfect, de la început până la sfârșit."
+    },
+    {
+      "client_name": "Mihai Radu",
+      "review_date": "2024-05-30",
+      "rating": 3,
+      "comment": "Rezultat satisfăcător, dar am întâmpinat unele probleme de comunicare."
+    }
+  ]
+  

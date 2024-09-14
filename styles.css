@@ -1,0 +1,490 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --white: white;
+  --red: rgba(255, 71, 66, 0.8);
+  --green: rgba(162, 230, 182, 0.524);
+}
+
+nav{
+  height: 60px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container_meniu{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1rem;
+}
+
+
+nav a:hover{
+  background-color: var(--red);
+  color: var(--white);
+} 
+
+#page {
+  background-color: #FF4742;
+  color: white;
+}
+
+
+#activ_sidebar{
+  display: none;
+}
+.buton_deschidere_sidebar, .buton_inchidere_sidebar{
+  display: none;
+}
+
+#logo_menu{
+  margin-left: 3%;
+}
+
+@media(max-width: 800px){
+  .container_meniu{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 50;
+    width: 300px;
+
+    background-color: var(--white);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  .buton_deschidere_sidebar, .buton_inchidere_sidebar{
+    padding: 20px;
+    display: block;
+  }
+  #activ_sidebar:checked ~ .container_meniu{
+    right: 0;
+  }
+ #activ_sidebar:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }  
+  #logo_menu{
+    margin-right: auto;
+  }
+}
+
+
+main{
+  width: 100%;
+  background-position: center;
+  opacity: 1;
+  position: relative;
+  opacity: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.prezentare {
+  flex: 1;
+  display: flex;
+  background-image: linear-gradient(rgba(162, 230, 182, 0.524), rgb(10, 20, 30, 0.2)), url(images/poza.jpg);
+  background-size: cover;
+  padding-bottom: 2%;
+}
+
+.prezentare h1{
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 100px;
+  font-size: clamp(20px, 2.7vw, 40px);
+  text-align: left;
+}
+
+#prezentare_text{
+  padding-top: 10%;
+}
+
+#prezentare_buton{
+  padding-left: 70%;
+  margin-right: 20px;
+}
+
+.titlu{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(30px, 2.5vw, 60px);
+}
+
+.subtitlu{
+  color: #FF4742;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(15px, 1.5vw, 20px);
+  padding-left: 1.5%;
+  padding-bottom: 1%;
+}
+
+.text{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(17px, 2vw, 24px);
+  text-align: justify;
+}
+
+/*CONTINUT1*/
+.continut1{
+  flex: 1;
+  display: flex;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+#imagine_continut1{
+  padding-right: 3%;
+  display: flex;
+  align-items: center;
+}
+
+#imagine_continut1 img{
+  width: 600px;
+}
+
+#cinesuntem{
+  padding-left: 3%;
+}
+
+
+
+/*CONTINUT2*/
+.continut2{
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(34, 139, 34, 0.2);
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+#servicii{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2%;
+}
+
+#servicii h3{
+  padding-top: 2%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+#servicii a{
+  text-decoration: none;
+  color: #FF4742;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+#servicii a:hover{
+  color: white;
+  font-weight: bold;
+}
+
+#servicii h4{
+  padding-top: 10%;
+  text-align: center;
+}
+
+#servicii img{
+  border-radius: 10%;
+}
+ 
+#proiectare, #amenajare, #intretinere{
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 4%;
+  padding: 2%;
+} 
+
+
+/*CONTINUT3*/
+.continut3{
+  flex: 1;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+#text_articole{
+  padding-top: 3%;
+}
+
+
+.articol{
+  position: relative;
+  padding: 3%;
+  margin: 8px 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.articol p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.articol a{
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+}
+
+.articol a :hover{
+  color: #FF4742;
+}
+
+
+/*FOOTER*/
+footer{
+  background-color: rgb(34, 139, 34, 0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1%;
+}
+
+#footer_menu a{
+  text-decoration: none;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: clamp(15px, 1.5vw, 30px);
+}
+
+#footer_menu a:hover{
+  color: #FF4742;
+}
+
+#footer_menu{
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#footer_copyright{
+  font-size: clamp(10px, 1vw, 20px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+
+
+
+
+.button {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block; 
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 12px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button:hover,
+.button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button:active {
+  opacity: .5;
+}
+
+
+/*PAGINI*/
+.prezentare_pagina{
+  background-color: rgb(34, 139, 34, 0.2);
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.prezentare_pagina h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(30px, 4vw, 40px);
+  text-align: center;
+}
+
+.prezentare_pagina h4{    
+  color: #FF4742;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-left: 1.5%;
+  padding-bottom: 1%;
+  text-align: center;
+  font-size: clamp(10px, 3vw, 15px);
+}
+
+
+.prezentare_pagina p{
+padding-left: 5%;
+padding-right: 5%;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: clamp(17px, 3vw, 22px);
+text-align: center;
+}
+
+@media (max-width: 1250px)
+{
+  #servicii{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 2%;
+    align-items: center;
+  }
+  
+  #proiectare, #amenajare, #intretinere{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  } 
+
+  #imagine_continut1 img{
+    width: 450px;
+  }
+
+  #prezentare_buton{
+    padding-top: 15%;
+    padding-left: 30%;
+  }
+}
+
+@media(max-width:1100px)
+{
+  #prezentare_buton{
+    padding-top: 15%;
+    padding-left: 20%;
+  }
+}
+
+
+@media(max-width: 1000px)
+{
+  .continut1{
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #imagine_continut1{
+    padding-right: 3%;
+    display: flex;
+    align-items: center;
+  }
+  
+  #imagine_continut1 img{
+    display: none;
+  }
+  
+  #cinesuntem{
+    padding-left: 3%;
+  }
+
+  .articol p{
+    font-size: 1rem;
+  }
+
+  .articol h3{
+    font-size: 20px;
+  }
+
+  .prezentare h1{
+    padding-left:50px;
+  }
+
+  #prezentare_buton{
+    padding-top: 15%;
+    padding-left: 15%;
+  }
+  
+.button {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 10px 9px;
+}
+}
+
+@media(max-width: 780px)
+{
+  .prezentare {
+    flex-direction: column;
+  }
+
+  #prezentare_buton{
+    padding-top: 5%;
+  }
+}
+
+
+#reviews_feed
+{
+  text-align: center;
+}
+
+#titlu-reviews
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+}
+
+.text-review
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
